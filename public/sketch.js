@@ -1,8 +1,10 @@
 var socket;
+var canvas;
 
 function setup(){
-    createCanvas(windowWidth, windowHeight);
-    background(247, 250, 252);
+    canvas = createCanvas(windowWidth, windowHeight);
+    canvas.position(0,0);
+    canvas.style('z-index', '-1');
     socket = io.connect();
     socket.on('mouse', newDrawing);
 }

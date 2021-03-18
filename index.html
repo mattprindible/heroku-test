@@ -1,9 +1,63 @@
 <html>
   <head>
+    <title>Matt Prindible</title>
     <style type="text/css">body{margin:0;overflow:hidden;}</style>
     <script src="/socket.io/socket.io.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/p5@1.2.0/lib/p5.js"></script>
     <script src="sketch.js"></script>
+    <style>
+      @font-face {
+          font-family: 'Atlas Grotesk';
+          src: url('AtlasGrotesk-Regular-Web.woff2') format('woff2');
+      }
+      ::selection{
+          background: #1FFFD4;
+      }
+      body{
+          font-family: 'Atlas Grotesk';
+          background-color: #f7fafc;
+          color: #202932;
+          padding: 1em;
+      }
+      a:link, a:visited, a:hover, a:active{
+          text-decoration: none;
+          color: #202932;
+      }
+      p{
+          margin: 0;
+      }
+      .container{
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+          grid-template-areas:
+              "nav nav nav nav"
+              "hr hr hr hr";
+          grid-gap: .5rem;
+      }
+      hr{
+          grid-area: hr;
+          margin: 0;
+          border-top: 1px solid #202932;
+          border-bottom: 0px;
+      }
+      nav{
+          grid-area: nav;
+      }
+      @media only screen and (max-width: 550px){
+          .container{
+              grid-template-columns: 1fr;
+              grid-template-areas:
+                  "nav"
+                  "hr";
+          }
+      }
+  </style>
   </head>
-  <body></body>
+  <body>
+    <div class='container'>
+      <nav>
+          <a href="/">Matt Prindible</a>
+      </nav>
+      <hr>
+  </body>
 </html>
